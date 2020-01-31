@@ -1,8 +1,8 @@
-import fastify from "fastify"
+import fastify from "fastify";
 
 const build = () => {
-    const app = fastify({ });
-    app.get('/', async (req, res) => {
+    const app = fastify({});
+    app.get("/", async (req, res) => {
         const { name = "World" } = req.query;
         req.log.info({ name }, "hello, world!");
         return `Hello, ${name}`;
@@ -11,4 +11,4 @@ const build = () => {
     return app;
 };
 
-module.exports = build;
+export default build;
