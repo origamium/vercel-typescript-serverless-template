@@ -1,7 +1,6 @@
 {
   "name": "fastly-test",
   "version": "1.0.0",
-  "main": "public/hello.js",
   "license": "MIT",
   "engines": {
     "node": "12.x"

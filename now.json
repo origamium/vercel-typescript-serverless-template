@@ -1,6 +1,6 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/.*", "dest": "/public/hello.js"}
+    { "src": "/.*", "dest": "/api/index.js"}
   ]
 }
