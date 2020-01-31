@@ -1,16 +1,17 @@
 {
   "name": "fastly-test",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "engines": {
     "node": "12.x"
   },
   "scripts": {
-    "packing": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "build:dev": "webpack"
   },
   "dependencies": {
-    "fastly": "^2.2.1"
+    "fastify": "^2.11.0"
   },
   "devDependencies": {
     "@types/node": "^13.5.3",
