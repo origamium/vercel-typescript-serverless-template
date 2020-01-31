@@ -5,10 +5,6 @@
   "engines": {
     "node": "12.x"
   },
-  "scripts": {
-    "build": "NODE_ENV=production webpack",
-    "build:dev": "webpack"
-  },
   "dependencies": {
     "fastify": "^2.11.0"
   },
