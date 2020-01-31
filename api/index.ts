@@ -1,10 +1,7 @@
 import fastify from "fastify"
 
 const build = () => {
-    const app = fastify({
-        logger: true
-    });
-
+    const app = fastify({ });
     app.get('/', async (req, res) => {
         const { name = "World" } = req.query;
         req.log.info({ name }, "hello, world!");
