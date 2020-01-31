@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/bundle.js",
+      "use": "@now/node",
+      "config": {
+        "helpers": false
+      }
+    }
+  ],
+  "routes": [
+    { "src": "/.*", "dest": "/dist/bundle.js"}
+  ]
+}
