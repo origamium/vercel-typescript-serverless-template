@@ -6,12 +6,29 @@
         "node": "12.x"
     },
     "scripts": {
+        "typecheck": "tsc --noEmit",
         "lint:ts": "eslint ./api/**/*.ts --cache",
         "lint:json": "prettier '*.json'",
         "lint:fix:ts": "yarn lint:ts --fix",
         "lint:fix:json": "yarn lint:json --write",
         "lint": "run-p -l -n -c --aggregate-output lint:*",
         "lint:fix": "run-p -l -n -c --aggregate-output lint:fix:*"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "yarn typecheck",
+            "yarn lint:fix:ts",
+            "git add"
+        ],
+        "*.{json}": [
+            "yarn lint:fix:json",
+            "git add"
+        ]
     },
     "dependencies": {
         "fastify": "^2.11.0"
