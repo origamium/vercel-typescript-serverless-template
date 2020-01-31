@@ -2,14 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/bundle.js",
-      "use": "@now/node",
-      "config": {
-        "helpers": false
-      }
+      "src": "package.json",
+      "use": "@now/node"
     }
   ],
   "routes": [
-    { "src": "/.*", "dest": "/dist/bundle.js"}
+    { "src": "/.*", "dest": "/public/hello.js"}
   ]
 }

@@ -3,8 +3,8 @@ module.exports = {
 	entry: "./src/index.ts",
 	target: "node",
 	output: {
-		filename: "bundle.js",
-		path: __dirname + "/dist"
+		filename: "hello.js",
+		path: __dirname + "/public"
 	},
 	resolve: {
 		extensions: [".ts", ".js"],
