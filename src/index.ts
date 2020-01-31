@@ -1,9 +1,23 @@
-import {IncomingMessage, ServerResponse} from "http";
-const http = require("http");
+import fastify from "fastify"
 
-http.createServer((req: IncomingMessage, res: ServerResponse) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World');
-}).listen(8080, "127.0.0.1");
+const build = () => {
+    const app = fastify({
+        logger: true
+    });
+
+    app.get('/', async (req, res) => {
+        const { name = "World" } = req.query;
+        req.log.info({ name }, "hello, world!");
+        return `Hello, ${name}`;
+    });
+
+    return app;
+};
+
+const app = build();
+
+module.exports = async (req: any, res: any) => {
+    await app.ready();
+    app.server.emit("request", req, res);
+};
 
