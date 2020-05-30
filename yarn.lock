@@ -25,10 +25,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@now/node@1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@now/node/-/node-1.4.0.tgz#fc6c107754f22fd9ba0cc9f66c8474be1a6a9bce"
-  integrity sha512-JdHK16AL8D1EUcUV5f1xZ6RJT+iCnSq4P/gkc2QELmkx0PxSM4RtoAu4HFMxNv/qk72qArsrg+RRwjg55R04Zg==
+"@now/node@1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@now/node/-/node-1.6.1.tgz#d478bfbc98af05d3eae7b5b01b26d1a1c638819b"
+  integrity sha512-EdSdOS4HSJRexibxIbrKCLZZ1sc0+oaD0P7kvhf26CbXSNlrZP0Iycpb+fbO4Qc2EcmGR2am90DhoX548B5a7g==
   dependencies:
     "@types/node" "*"
 
